@@ -1,4 +1,4 @@
-Stopwatch: The Game - CodeClinic tips
+Stopwatch: The Game - Code Clinic tips
 
 This page include helpful tips based on our experience in helping students in the "Code Clinic" (interactivepython@online.rice.edu). Be sure and take a look at these tips if you get stuck.
 Make sure that format()returns (not prints) the formatted time as a string. Also, be sure to call format with the global timer counter in your draw handler to output the formatted time on the canvas. Remember: return a string in the definition of format, call format correctly in the draw handler. 
