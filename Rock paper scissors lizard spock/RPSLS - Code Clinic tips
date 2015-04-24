@@ -1,0 +1,25 @@
+RPSLS - Code Clinic tips
+
+This page include helpful tips based on our experience in helping students in the "Code Clinic" (interactivepython@online.rice.edu). Be sure and take a look at these tips if you get stuck.
+A crucial part of implementing RPSLS is building the two helper functions name_to_number() and number_to_name(). One good programming practice that will save you lots of time when implementing your mini-projects is to test your helper functions thoroughly before you proceed to using them. To help you with this process, we have created two program templates that you can use to test these helper functions.
+To use our templates, open the provided CodeSkulptor links below, then copy and paste your implementation of the helper function into the template. Then, when you run the resulting program, the output created by the program should match the output indicated in the template's comments. If your helper function passes this test, it's likely that your implementation is correct and you can move on to the next step of the mini-project.
+
+name_to_number template 
+number_to_name template
+
+Looking over help requests sent to the Code Clinic from previous sessions, here are some common coding problems for RPSLS.
+
+Incorrectly using return in place of print. The helper functions name_to_number() and number_to_name() should use return since you want them to compute and return a value for you. On the other hand rpsls() should not use return. It should use print to display its results in the console.
+
+Failing to capitalize "Spock". Strings are case-sensitive, so "Spock" is not the same as "spock" in Python.
+
+The string "0" is not the same as the number 0. The conditions foo == 0 and foo == "0" mean different things.
+
+The bodies of functions should be indented. Python uses indentation to define the body of a function.
+
+Compound conditionals testing whether a number is one of two choices should be like if (num == 1) or (num == 2):, not if num == (1 or 2):. In English, the second form looks like shorthand for the first. But in Python, they mean different things, and the second form is not what you want for RPSLS. 
+
+If you avoid or catch these 5 errors, you will save yourself a lot of time.
+
+In constructing the function rplsls(), you will probably compute the difference of two numbers and take the result modulo (remainder) five. In Python, the remainder operator has higher precedence than minus so 2 - 3 % 5 and (2 - 3) % 5 give different answers. To avoid having this issue arise, make sure to use parentheses to ensure that the subtraction is done before the remainder.
+
