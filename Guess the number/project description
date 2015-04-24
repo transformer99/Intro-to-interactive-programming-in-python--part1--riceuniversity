@@ -31,3 +31,5 @@ Your final addition to “Guess the number” will be to restrict the player to 
 Since the strategy above for playing “Guess the number” approximately halves the range of possible secret numbers after each guess, any secret number in the range [low, high) can always be found in at most n guesses where n is the smallest integer such that 2 ** n >= high - low + 1. For the range [0, 100), n is seven. For the range [0, 1000), n is ten. In our implementation, the function new_game() set the number of allowed guess to seven when the range is [0, 100) or to ten when the range is [0, 1000). For more of a challenge, you may compute n from low and high using the functions math.log and math.ceil in the math module.
 
 When your program starts, the game should immediately begin in range [0, 100). When the game ends (because the player either wins or runs out of guesses), a new game with the same range as the last one should immediately begin by calling new_game(). Whenever the player clicks one of the range buttons, the current game should stop and a new game with the selected range should begin.
+
+http://www.codeskulptor.org/#user39_0D632Rxh3x_3.py
