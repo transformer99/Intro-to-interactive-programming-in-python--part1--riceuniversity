@@ -1,0 +1,18 @@
+Pong - Code Clinic tips
+
+This page include helpful tips based on our experience in helping students in the "Code Clinic" (interactivepython@online.rice.edu). Be sure and take a look at these tips if you get stuck.
+For those of you struggling with controlling your paddles, remember this. You should update the paddle's position in the draw handler so it's updated continuously. The paddle's velocity is updated in the key handlers when a key is pressed or released. Use both the keyup and keydown handlers to control the paddle's velocity.
+paddle1_pos, paddle2_pos, paddle1_vel and paddle2_vel should be numbers, NOT lists. Making them list causes needless complexity and is highly UNrecommended. Just use the numbers paddle1_pos and paddle2_pos to build expressions to draw the paddles.
+If you are having trouble visualizing how their values relate to the geometry of Pong, please review the Pong video and sit down with pencil and paper to sketch of the Pong frame and the variables.
+
+VERY IMPORTANT
+I can't stress this enough. Read the mini-project description and walk through. They are there to help you avoid wandering off into dead ends. If you are stuck and haven't read the description carefully, you are probably headed for hard times.
+
+Stuck paddles are the bane of many Pong programmers trying to keep them on the screen. Remember that you update your paddle's position via something like
+paddle1_pos += paddle1_vel
+Ideally, you'd like to add something like
+
+if paddle1_pos >= HALF_PAD_HEIGHT:
+    paddle1_pos += paddle1_vel
+The problem with this solution is that the paddle sticks because when the condition in the if becomes True, the paddle can't move anymore, ever! The trick is to replace paddle1_pos in the condition for the if by paddle1_pos + paddle1_vel. Now, this condition check to see if the next movement for the paddle puts it off the edge. If so, the move is disallowed. Now, you can move the paddle back down.
+
